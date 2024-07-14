@@ -1,0 +1,215 @@
+:root {
+  scroll-behavior: auto;
+  --title-color: #0394c7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #272b30;
+  font-family: "Nerko One", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.Title {
+  font-family: "Nerko One", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* navBar */
+.lending {
+ height: 30vh;
+  background-image: linear-gradient(#272b303e, #272b303e),
+    url(../images/wraper.png);
+  
+}
+.navbar {}
+.nav-side {
+  margin: auto;
+  background-color: #3a497b;
+}
+.nav-side p {
+}
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: var(--title-color);
+}
+.nav-link {
+  color: white;
+}
+
+/* card */
+.img {
+  height: 180px;
+  background-color: red;
+  overflow: hidden;
+}
+
+.bg-gray {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #333333c5;
+  color: white;
+}
+
+.my-card {
+  filter: grayscale(0.7);
+  transition: transform 0.5s, filter 0.5s 0.1s;
+  color: white;
+}
+
+.my-card:hover {
+  filter: grayscale(0);
+  transform: scale(1.05);
+}
+
+
+.number-lines {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+          line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+
+/*Home*/
+.mainCard {
+  background-color: #272b30;
+  cursor: pointer;
+  transition: all 0.7s;
+}
+.mainCard .btnCard {
+  font-size: 14px;
+  background-color: #3a497b;
+  border: none;
+}
+.mainCard .spanCard {
+  font-size: 12px;
+}
+.mainCard img {
+  filter: brightness(40%);
+  transition: all 0.7s;
+}
+.mainCard:hover img {
+  filter: brightness(100%);
+}
+.mainCard:hover {
+  transform: scale(1.05);
+}
+.mainCard p {
+  font-size: 16px;
+}
+
+/*details  */
+.details{
+  background-color: #272b30;
+  overflow-y: scroll;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+
+.detils-card{
+
+}
+
+/* loader  */
+
+.loader {
+  
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  color: #fff;
+}
+  .loader:before,
+  .loader:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    transform: rotateX(70deg);
+    animation: 1s spin linear infinite;
+  }
+  .loader:after {
+    color: #FF3D00;
+    transform: rotateY(70deg);
+    animation-delay: .4s;
+  }
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: .2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: .2em .2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 .2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -.2em .2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -.2em -.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: .2em -.2em 0 0 currentcolor;
+  }
+}
