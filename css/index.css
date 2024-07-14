@@ -137,6 +137,10 @@ a {
 .detils-card{
 
 }
+/* exit */
+.exit{
+  cursor: pointer;
+}
 
 /* loader  */
 

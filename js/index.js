@@ -13,7 +13,7 @@ let cartaina = "";
 setTimeout (function(){
   display("mmorpg");
 loader.classList.add("d-none");
-},1000)
+},1000);
 
 links.forEach((link) => {
   link.addEventListener("click", async function (e) {
@@ -28,7 +28,7 @@ links.forEach((link) => {
 
     cartaina = "";
     display(categoryName);
-    setTimeout(function(){loader.classList.add("d-none");},1000)
+    setTimeout(function(){loader.classList.add("d-none");},1000);
   });
 });
 
@@ -51,6 +51,7 @@ async function display(cat) {
 
       let data = await fetchDetilas.detailsData(id);
       let desDetils = design.detailesCard(data);
+      nav.classList.add("d-none");
       document.querySelector(".details .container").innerHTML = desDetils;
       loader.classList.add("d-none");
 
@@ -60,6 +61,7 @@ async function display(cat) {
       document.querySelector(".exit").addEventListener("click", function (e) {
         document.querySelector(".parent").classList.remove("d-none");
         document.querySelector(".details").classList.add("d-none");
+        nav.classList.remove("d-none")
       });
     });
   });
